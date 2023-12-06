@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Đăng Ký</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+       a{
+	text-decoration: none;
+}
+	ul{
+	list-style: none;
+}
+nav ul li:nth-child(3) {
+	position: relative;
+}
+nav ul li:nth-child(3) input {
+	height: 30px;
+	width: 100%;
+	border-radius: 10px;
+	border: none;
+}
+nav ul li:nth-child(3) i {
+	
+	position: absolute;
+	font-size: 15px;
+	right: 12px;
+	line-height: 12px;
+	color: #333;
+	cursor: pointer;
+}
+	.menu-bar{
+	background-color: rgb(110, 109, 107);
+
+}
+.menu-bar ul {
+	display: flex;
+	justify-content: space-between;
+	color:black;
+}
+.menu-bar ul li a {
+	color: rgb(250, 250, 250);
+	font-size: 16px;
+	
+}
+.menu-bar ul li a i {
+	margin-right: 10px;
+	
+	font-size: 16px;
+}
+.menu-bar > ul > li {
+	padding: 12px 6px;
+	transition: all 0.3s ease;
+}
+.menu-bar ul li:hover {
+	background-color: #d8dadb;
+}
+	.menu-bar ul li:nth-child(5){
+		position: relative;
+			
+	}
+
+	header{
+		background-color: #FFF200;
+		text-align: center;
+		height: 50px;
+	}
+ul{
+	list-style: none;
+	}
+    .end {
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    }
+    </style>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/c4e08856ef.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="dangki.css">
+
+</head>
+<body>
+    <nav>
+        <ul>
+        <li><a href="index.html"><img  style="width: 160px;height: 50px;margin:5px;" src="images/logo.png" alt=""></a> </li>
+        <li >  <a href="vechungtoi.html">About Us</a></li>
+        <li><input type="text" placeholder="Bạn muốn tìm gì..."><i  class="fa-solid fa-magnifying-glass" ></i></li>
+        <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Giỏ hàng</button></li>
+        <li><a href="tracuudonhang.html">Tra cứu đơn hàng</a>  </li>
+        <li><a href="dangnhap.html">Tài khoản</a> </li>
+        <li style="margin-right: 40px"><a href="">Hỏi đáp</a></li>
+        </ul>
+    </nav>	
+    <section class="menu-bar">
+        <div class="container">
+            <div class="menu-bar-content">
+            <ul>
+                <li ><a href="pageiphone.html"><i class="fas fa-mobile-alt" ></i>Iphone</a>
+                <li ><a href="pagesamsung.html"><i class="fas fa-mobile-alt" ></i>Samsung</a>
+                    <li ><a href="pageoppo.html"><i class="fas fa-mobile-alt" ></i>Oppo</a>
+                        <li ><a href="pagexiaomi.html"><i class="fas fa-mobile-alt" ></i>Xiaomi</a>
+                            <li><a href=""><i class="fas fa-headphone-alt"></i>Phụ kiện</a><i style="margin-left: 5px" class="fas fa-sort-down"></i>
+                                <div class="submenu">
+                                 <ul>
+                                    <li><a href="">Pin sạc dự phòng</a></li>
+                                     <li><a href="">Cáp sạc</a></li>
+                                     <li><a href="">Chuột, bàn phím</a></li>
+                                 </ul>
+                                </div>
+                                </li>
+                </ul>
+            </div>
+            </div>
+            </section>
+    <div class="register-container">
+        <h1>Đăng Ký</h1>
+        <form class="register-form">
+            <input type="text" id="fullname" placeholder="Họ và tên">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Mật khẩu">
+            <input type="password" id="confirm-password" placeholder="Xác nhận mật khẩu">
+            <input type="submit" value="Đăng ký">
+            <div class="register-options">
+              <span>Đã có tài khoản?</span>  <a href="dangnhap.html">Đăng nhập</a>
+            </div>
+        </form>
+    </div>
+    <div class="end">
+        <nav>
+        <ul>
+            <div class="hoten"><li><p>Nhóm 15</p></li></div>
+            <div class="logoend"><img  style="width: 220px;height: 80px" src="images/logo.png" ></div>
+            <div class="footer"><li><p>Based on &nbsp;</p><a href="https://www.shopdunk.com/"> Shopdunk.com</a></li></div>
+        </ul>
+    </nav>
+        </div>
+    <script>
+        // JavaScript code here
+        const registerForm = document.querySelector('.register-form');
+        const fullnameInput = document.getElementById('fullname');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirm-password');
+
+        // More JavaScript functions and event listeners here
+        // ...
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f7f7f7;
+margin: auto;
+padding: 0px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 50vh;
+}
+.pay-container {
+background-color: #fff;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+width: 60%;
+max-width: 400px;
+margin:auto;
+margin-top: 50px;
+margin-bottom: 30px;
+}
+.pay-container h1 {
+color: #333;
+text-align: center;
+margin-bottom: 1rem;
+}
+.confirm-btn {
+display: inline-block;
+padding: 10px 20px;
+background-color: #498d6c;
+color: white;
+text-align: center;
+text-decoration: none;
+border-radius: 5px;
+font-weight: bold;
+margin-top: 20px;
+margin-left: 110px;
+}
+.confirm-btn:hover {
+background-color: #5C8D89;
+}
+/*icon is used for the icon picture (zalopay, vnpay,...)*/
+.icon{
+height: 75px; width: 75px;
+border-radius: 5px;
+}
+/*pay-options is used for the multiple options*/
+.pay-options {
+display: flex;
+flex-direction: row;
+align-items: center;
+border-style: solid;
+border-radius: 20px;
+border-width: 1px;
+border-color: gray;
+margin-bottom: 20px;
+}
+
+.pay-options label {
+display: flex;
+align-items: center;
+padding-right: 270px;
+}
+.pay-options:hover{
+background-color: #ccc;
+}
+
+/*Personal Information*/
+.PI input{
+padding: 1rem;
+margin-bottom: 1rem;
+border: 1px solid #ccc;
+border-radius: 4px;
+width:100%;
+}

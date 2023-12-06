@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <style>
+    a{
+	text-decoration: none;
+}
+	ul{
+	list-style: none;
+}
+nav ul li:nth-child(3) {
+	position: relative;
+}
+nav ul li:nth-child(3) input {
+	height: 30px;
+	width: 100%;
+	border-radius: 10px;
+	border: none;
+}
+nav ul li:nth-child(3) i {
+	
+	position: absolute;
+	font-size: 15px;
+	right: 12px;
+	line-height: 12px;
+	color: #333;
+	cursor: pointer;
+}
+	.menu-bar{
+	background-color: rgb(110, 109, 107);
+
+}
+.menu-bar ul {
+	display: flex;
+	justify-content: space-between;
+	color:black;
+}
+.menu-bar ul li a {
+	color: rgb(250, 250, 250);
+	font-size: 16px;
+	
+}
+.menu-bar ul li a i {
+	margin-right: 10px;
+	
+	font-size: 16px;
+}
+.menu-bar > ul > li {
+	padding: 12px 6px;
+	transition: all 0.3s ease;
+}
+.menu-bar ul li:hover {
+	background-color: #d8dadb;
+}
+	.menu-bar ul li:nth-child(5){
+		position: relative;
+			
+	}
+
+	header{
+		background-color: #FFF200;
+		text-align: center;
+		height: 50px;
+	}
+ul{
+	list-style: none;
+	}
+  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Thanh Toán</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+    <li><a href="index.html"><img  style="width: 160px;height: 50px;margin:5px;" src="images/logo.png" alt=""></a> </li>
+    <li >  <a href="vechungtoi.html">About Us</a></li>
+    <li><input type="text" placeholder="Bạn muốn tìm gì..."><i  class="fa-solid fa-magnifying-glass" ></i></li>
+    <li><a href=""></a><button><i class="fas fa-shopping-cart"></i>Giỏ hàng</button></li>
+    <li><a href="tracuudonhang.html">Tra cứu đơn hàng</a>  </li>
+    <li><a href="dangnhap.html">Tài khoản</a> </li>
+    <li style="margin-right: 40px"><a href="">Hỏi đáp</a></li>
+    </ul>
+</nav>	
+<section class="menu-bar">
+    <div class="container">
+        <div class="menu-bar-content">
+        <ul>
+            <li ><a href="pageiphone.html"><i class="fas fa-mobile-alt" ></i>Iphone</a>
+            <li ><a href="pagesamsung.html"><i class="fas fa-mobile-alt" ></i>Samsung</a>
+                <li ><a href="pageoppo.html"><i class="fas fa-mobile-alt" ></i>Oppo</a>
+                    <li ><a href="pagexiaomi.html"><i class="fas fa-mobile-alt" ></i>Xiaomi</a>
+                        <li><a href=""><i class="fas fa-headphone-alt"></i>Phụ kiện</a><i style="margin-left: 5px" class="fas fa-sort-down"></i>
+                            <div class="submenu">
+                             <ul>
+                                <li><a href="">Pin sạc dự phòng</a></li>
+                                 <li><a href="">Cáp sạc</a></li>
+                                 <li><a href="">Chuột, bàn phím</a></li>
+                             </ul>
+                            </div>
+                            </li>
+            </ul>
+        </div>
+        </div>
+        </section>
+    <div class="pay-container">
+        <h1>Thanh toán</h1>
+        <form id="payment-form">
+          <!--Personal information-->
+          <div class="PI">
+            <label for="name" >Họ tên:</label>
+            <input type="text" id="name" name="name" required> </br>
+          </div>
+          
+          <div class="PI">
+            <label for="add">Địa chỉ:</label>
+            <input type="text" id="add" name="add" required> </br>
+          </div>
+          
+          <div class="PI">
+            <label for="phone">Số điện thoại:</label>
+            <input type="text" id="phone" name="phone" required></br>
+          </div>
+          
+          
+          <!--VNPay-->
+          <div class="pay-options">
+            <input type="radio" id="VNPay" name="fav-language" value="VNPay" checked>
+            <label for="VNPay"><img src="images/VNpay.png" alt="VNPay" class="icon">VNPay</label>
+          </div>
+          <input type="submit" value="Xác nhận thanh toán" class="confirm-btn">
+        </form>
+    </div>
+    <div class="end">
+      <nav>
+      <ul>
+        <div class="hoten"><li><p>Nhóm 15</p></li></div>
+        <div class="logoend"><img  style="width: 220px;height: 80px" src="images/logo.png" ></div>
+        <div class="footer"><li><p>Based on &nbsp;</p><a href="https://www.shopdunk.com/"> Shopdunk.com</a></li></div>
+      </ul>
+    </nav>
+      </div>
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('payment-form');
+        const anchor = document.getElementById('payment-link');
+    
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+          
+          const radio = document.querySelector('input[name="fav-language"]:checked');
+          if (radio) {
+            const selectedValue = radio.value;
+            if (selectedValue === 'VNPay') {
+              form.action = 'QR.html';
+            } else if (selectedValue === 'Bank') {
+              form.action = 'QR.html';
+            } else {
+              
+            }
+
+            form.submit();
+          }
+        });
+      });
+    </script>
+</body>
+</html>
